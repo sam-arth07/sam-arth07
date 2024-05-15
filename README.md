@@ -16,7 +16,7 @@
 - 📚 Learning WebDev and AndroidDev is my current adventure.
 - 🤝 Open to collab on projects that aim for the stars.
 - 🛠️ Got a tech puzzle? Let's solve it together! Always Ready to solve Challenging Problems.
-- 📬 Reach out to me via ![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white&style=for-the-badge)- let's connect!
+- 📬 Reach out to me via <a href="https://www.linkedin.com/in/samarth-chaplot-130b88256">![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white&style=for-the-badge)</a>  let's connect!
 - 🎈 Fun fact: I can juggle code and Football at the same time!
 
 ## 🛠️ Toolbox Unleashed
