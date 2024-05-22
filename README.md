@@ -43,8 +43,8 @@
 <!--   <img src="https://github.com/devicons/devicon/blob/master/icons/spring/spring-original-wordmark.svg" title="Spring" alt="Spring" width="40" height="40"/>&nbsp; -->
 </div>
 
-## 📈 My GitHub Stats
-[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=sam-arth07&theme=dark&background=000000)](https://git.io/streak-stats)
+<!--## 📈 My GitHub Stats
+[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=sam-arth07&theme=dark&background=000000)](https://git.io/streak-stats) -->
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sam-arth07&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
 
