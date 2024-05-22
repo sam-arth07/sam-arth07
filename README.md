@@ -10,7 +10,7 @@
 </p>
 
 
-:man_technologist:Welcome to my digital playground! 🎢 I'm a passionate about Tech as a whole with particular interest in Full Stack Development<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> hailing from the vibrant city of Surat, Gujarat, India.
+:man_technologist:Welcome to my digital playground! 🎢 I'm a passionate about Tech as a whole with particular interest in Full Stack Development<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
 
 - 👨‍💻 I'm on a mission to code solutions that make a difference.
 - 📚 Learning WebDev and AndroidDev is my current adventure.
