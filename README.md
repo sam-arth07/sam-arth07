@@ -10,10 +10,10 @@
 </p>
 
 
-:man_technologist:Welcome to my digital playground! 🎢 I'm a passionate about Tech as a whole with particular interest in Full Stack Development<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
+:man_technologist:Welcome to my digital playground! 🎢 I'm a passionate about Tech as a whole with particular interest in Mobile Application Development<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
 
 - 👨‍💻 I'm on a mission to code solutions that make a difference.
-- 📚 Learning WebDev and AndroidDev is my current adventure.
+- 📚 Learning AndroidDev is my current adventure.
 - 🤝 Open to collab on projects that aim for the stars.
 - 🛠️ Got a tech puzzle? Let's solve it together! Always Ready to solve Challenging Problems.
 - 📬 Reach out to me via <a href="https://www.linkedin.com/in/samarth-chaplot-130b88256">![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white&style=for-the-badge)</a>  let's connect!
