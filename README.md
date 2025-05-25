@@ -5,7 +5,7 @@
 <!-- ![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white&style=for-the-badge) -->
 <p align=”center”>
 
-<img width="1834" alt="Make your README" src="https://github.com/sam-arth07/sam-arth07/assets/82860337/30df70bf-05c4-4770-ab67-f6d38cb0ea49">
+<img width="1834" alt="Samarth" src="https://github.com/user-attachments/assets/98e3fbbe-24fa-4adc-9cf5-38c7beb7d668" />
 
 </p>
 
