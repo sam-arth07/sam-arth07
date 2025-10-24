@@ -74,13 +74,13 @@ export default function Projects() {
               className="bg-[#313335] rounded-lg border border-[#323232] overflow-hidden hover:border-[#3DDC84] transition-all duration-300 transform hover:-translate-y-1"
             >
               {/* App Icon/Screenshot Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-[#3DDC84] to-[#2BAF66] flex items-center justify-center relative overflow-hidden">
+              <div className="h-48 bg-linear-to-br from-[#3DDC84] to-[#2BAF66] flex items-center justify-center relative overflow-hidden">
                 {/* Android Robot Icon */}
                 <svg className="w-24 h-24 text-white opacity-80" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M17.523 15.341c-.828-.524-2.233-1.426-2.233-2.21 0-.784.805-1.288 1.514-1.288.71 0 1.28.505 1.28 1.288h2.233c0-1.992-1.524-3.521-3.513-3.521s-3.514 1.529-3.514 3.521c0 1.992 1.524 3.521 3.514 3.521.71 0 1.28-.505 1.28-1.288 0-.784-1.405-1.686-2.233-2.21m-3.041 0c-.828-.524-2.233-1.426-2.233-2.21 0-.784.805-1.288 1.514-1.288.71 0 1.28.505 1.28 1.288h2.233c0-1.992-1.524-3.521-3.513-3.521s-3.514 1.529-3.514 3.521c0 1.992 1.524 3.521 3.514 3.521.71 0 1.28-.505 1.28-1.288 0-.784-1.405-1.686-2.233-2.21M1.571 19.447c1.313.834 6.171 3.904 10.429 3.904s9.116-3.07 10.429-3.904c.828-.524 0-1.686-.828-1.162-1.313.834-6.171 3.904-9.601 3.904-3.431 0-8.288-3.07-9.601-3.904-.828-.524-1.656.638-.828 1.162M1.571 15.341c1.313.834 6.171 3.904 10.429 3.904s9.116-3.07 10.429-3.904c.828-.524 0-1.686-.828-1.162-1.313.834-6.171 3.904-9.601 3.904-3.431 0-8.288-3.07-9.601-3.904-.828-.524-1.656.638-.828 1.162z"/>
                 </svg>
                 {/* Decorative pattern */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black opacity-20"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-transparent to-black opacity-20"></div>
               </div>
 
               {/* Project Details */}
