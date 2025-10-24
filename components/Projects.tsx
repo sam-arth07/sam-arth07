@@ -3,51 +3,39 @@
 const projects = [
   {
     id: 1,
-    title: 'Mifos Mobile',
-    description: 'A mobile banking application for financial inclusion, built with Kotlin and modern Android architecture components.',
-    technologies: ['Kotlin', 'MVVM', 'Retrofit', 'Coroutines', 'Room'],
-    githubLink: 'https://github.com/openMF/mifos-mobile',
-    playStoreLink: null
+    title: 'AnimeWiki',
+    description: 'A single place to access all information regarding Anime Characters in a beautiful mobile application. Built with Clean Architecture and MVVM pattern.',
+    technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'Retrofit', 'Hilt', 'Material 3'],
+    githubLink: 'https://github.com/sam-arth07/AnimeWiki',
+    playStoreLink: null,
+    image: 'https://github.com/user-attachments/assets/9cd8fbbb-7d5c-4651-80cf-fdd0c1344b36'
   },
   {
     id: 2,
-    title: 'E-Commerce Android App',
-    description: 'Full-featured shopping application with payment integration, real-time notifications, and smooth animations.',
-    technologies: ['Kotlin', 'Firebase', 'Jetpack Compose', 'Hilt', 'Flow'],
-    githubLink: '#',
-    playStoreLink: null
+    title: 'CurrencyApp',
+    description: 'A beautiful, modern currency exchange app built with Kotlin Multiplatform and Compose Multiplatform for Android and iOS.',
+    technologies: ['KMP', 'Compose Multiplatform', 'Ktor', 'Realm', 'Material 3'],
+    githubLink: 'https://github.com/sam-arth07/CurrencyApp',
+    playStoreLink: null,
+    image: 'https://github.com/user-attachments/assets/bc1daa6d-35d2-4746-a211-fa5200e8fb47'
   },
   {
     id: 3,
-    title: 'Task Management App',
-    description: 'Productivity app with offline-first architecture, featuring task tracking, reminders, and cloud sync.',
-    technologies: ['Java', 'SQLite', 'WorkManager', 'LiveData'],
-    githubLink: '#',
-    playStoreLink: null
+    title: 'ToDo App',
+    description: 'To Do Application using Jetpack Compose, RoomDB based on MVVM architecture. Features task management with priority levels and search.',
+    technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'Hilt', 'Material 3'],
+    githubLink: 'https://github.com/sam-arth07/ToDo',
+    playStoreLink: null,
+    image: 'https://github.com/user-attachments/assets/dbc00b38-06cb-425b-8717-44e384b79b77'
   },
   {
     id: 4,
-    title: 'Weather Forecast',
-    description: 'Real-time weather application with beautiful UI, location-based forecasts, and detailed weather insights.',
-    technologies: ['Kotlin', 'OpenWeather API', 'Glide', 'Material Design'],
-    githubLink: '#',
-    playStoreLink: null
-  },
-  {
-    id: 5,
-    title: 'Social Media Client',
-    description: 'Modern social networking app with posts, stories, real-time chat, and media sharing capabilities.',
-    technologies: ['Kotlin', 'Jetpack Compose', 'Firebase', 'CameraX'],
-    githubLink: '#',
-    playStoreLink: null
-  },
-  {
-    id: 6,
-    title: 'Fitness Tracker',
-    description: 'Health and fitness application tracking workouts, steps, calories, and providing personalized insights.',
-    technologies: ['Kotlin', 'Health Connect', 'MPAndroidChart', 'Room'],
-    githubLink: '#',
-    playStoreLink: null
+    title: 'Loan Manager',
+    description: 'A modern, full-stack loan management system designed for financial institutions and lending platforms. Built with Next.js and Node.js.',
+    technologies: ['Next.js', 'TypeScript', 'Prisma', 'MongoDB', 'Tailwind CSS'],
+    githubLink: 'https://github.com/sam-arth07/LoanManagerFrontend',
+    playStoreLink: null,
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop&crop=entropy&auto=format&q=80'
   }
 ];
 
@@ -73,14 +61,24 @@ export default function Projects() {
               key={project.id}
               className="bg-[#313335] rounded-lg border border-[#323232] overflow-hidden hover:border-[#3DDC84] transition-all duration-300 transform hover:-translate-y-1"
             >
-              {/* App Icon/Screenshot Placeholder */}
-              <div className="h-48 bg-linear-to-br from-[#3DDC84] to-[#2BAF66] flex items-center justify-center relative overflow-hidden">
-                {/* Android Robot Icon */}
-                <svg className="w-24 h-24 text-white opacity-80" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.523 15.341c-.828-.524-2.233-1.426-2.233-2.21 0-.784.805-1.288 1.514-1.288.71 0 1.28.505 1.28 1.288h2.233c0-1.992-1.524-3.521-3.513-3.521s-3.514 1.529-3.514 3.521c0 1.992 1.524 3.521 3.514 3.521.71 0 1.28-.505 1.28-1.288 0-.784-1.405-1.686-2.233-2.21m-3.041 0c-.828-.524-2.233-1.426-2.233-2.21 0-.784.805-1.288 1.514-1.288.71 0 1.28.505 1.28 1.288h2.233c0-1.992-1.524-3.521-3.513-3.521s-3.514 1.529-3.514 3.521c0 1.992 1.524 3.521 3.514 3.521.71 0 1.28-.505 1.28-1.288 0-.784-1.405-1.686-2.233-2.21M1.571 19.447c1.313.834 6.171 3.904 10.429 3.904s9.116-3.07 10.429-3.904c.828-.524 0-1.686-.828-1.162-1.313.834-6.171 3.904-9.601 3.904-3.431 0-8.288-3.07-9.601-3.904-.828-.524-1.656.638-.828 1.162M1.571 15.341c1.313.834 6.171 3.904 10.429 3.904s9.116-3.07 10.429-3.904c.828-.524 0-1.686-.828-1.162-1.313.834-6.171 3.904-9.601 3.904-3.431 0-8.288-3.07-9.601-3.904-.828-.524-1.656.638-.828 1.162z"/>
-                </svg>
-                {/* Decorative pattern */}
-                <div className="absolute inset-0 bg-linear-to-br from-transparent to-black opacity-20"></div>
+              {/* App Screenshot */}
+              <div className="h-48 bg-gradient-to-br from-[#3DDC84] to-[#2BAF66] flex items-center justify-center relative overflow-hidden">
+                {project.image ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <>
+                    {/* Android Robot Icon */}
+                    <svg className="w-24 h-24 text-white opacity-80" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M17.523 15.341c-.828-.524-2.233-1.426-2.233-2.21 0-.784.805-1.288 1.514-1.288.71 0 1.28.505 1.28 1.288h2.233c0-1.992-1.524-3.521-3.513-3.521s-3.514 1.529-3.514 3.521c0 1.992 1.524 3.521 3.514 3.521.71 0 1.28-.505 1.28-1.288 0-.784-1.405-1.686-2.233-2.21m-3.041 0c-.828-.524-2.233-1.426-2.233-2.21 0-.784.805-1.288 1.514-1.288.71 0 1.28.505 1.28 1.288h2.233c0-1.992-1.524-3.521-3.513-3.521s-3.514 1.529-3.514 3.521c0 1.992 1.524 3.521 3.514 3.521.71 0 1.28-.505 1.28-1.288 0-.784-1.405-1.686-2.233-2.21M1.571 19.447c1.313.834 6.171 3.904 10.429 3.904s9.116-3.07 10.429-3.904c.828-.524 0-1.686-.828-1.162-1.313.834-6.171 3.904-9.601 3.904-3.431 0-8.288-3.07-9.601-3.904-.828-.524-1.656.638-.828 1.162M1.571 15.341c1.313.834 6.171 3.904 10.429 3.904s9.116-3.07 10.429-3.904c.828-.524 0-1.686-.828-1.162-1.313.834-6.171 3.904-9.601 3.904-3.431 0-8.288-3.07-9.601-3.904-.828-.524-1.656.638-.828 1.162z"/>
+                    </svg>
+                    {/* Decorative pattern */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black opacity-20"></div>
+                  </>
+                )}
               </div>
 
               {/* Project Details */}
