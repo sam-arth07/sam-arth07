@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Android Studio Darcula Theme Colors */
+  --background: #2B2B2B;
+  --foreground: #A9B7C6;
+  --android-green: #3DDC84;
+  --editor-bg: #2B2B2B;
+  --line-number-bg: #313335;
+  --tab-bg: #3C3F41;
+  --tab-active: #4E5254;
+  --border-color: #323232;
+  --selection-bg: #214283;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-android-green: var(--android-green);
+  --font-sans: var(--font-roboto);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar for Android Studio feel */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2B2B2B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555555;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
 }
