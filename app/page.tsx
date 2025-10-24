@@ -1,17 +1,21 @@
+import AndroidStudioNav from '@/components/AndroidStudioNav';
 import Hero from '@/components/Hero';
-import Projects from '@/components/Projects';
-import MifosContributions from '@/components/MifosContributions';
 import Skills from '@/components/Skills';
+import MifosContributions from '@/components/MifosContributions';
+import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Hero />
-      <Projects />
-      <MifosContributions />
-      <Skills />
-      <Contact />
-    </main>
+    <>
+      <AndroidStudioNav />
+      <main className="min-h-screen">
+        <Hero />
+        <Skills />
+        <MifosContributions />
+        <Projects />
+        <Contact />
+      </main>
+    </>
   );
 }

@@ -1,103 +1,98 @@
 'use client';
 
-const skillCategories = [
-  {
-    title: 'Languages',
-    skills: [
-      { name: 'Kotlin', level: 95 },
-      { name: 'Java', level: 90 },
-      { name: 'XML', level: 85 },
-      { name: 'SQL', level: 80 }
-    ]
-  },
-  {
-    title: 'Android Framework',
-    skills: [
-      { name: 'Jetpack Compose', level: 90 },
-      { name: 'MVVM Architecture', level: 95 },
-      { name: 'Material Design', level: 90 },
-      { name: 'Android SDK', level: 95 }
-    ]
-  },
-  {
-    title: 'Libraries & Tools',
-    skills: [
-      { name: 'Retrofit', level: 90 },
-      { name: 'Room Database', level: 85 },
-      { name: 'Coroutines & Flow', level: 90 },
-      { name: 'Hilt/Dagger', level: 85 },
-      { name: 'Firebase', level: 80 },
-      { name: 'Git & GitHub', level: 90 }
-    ]
-  },
-  {
-    title: 'Concepts',
-    skills: [
-      { name: 'Clean Architecture', level: 90 },
-      { name: 'RESTful APIs', level: 85 },
-      { name: 'Offline-First', level: 85 },
-      { name: 'UI/UX Design', level: 80 }
-    ]
-  }
-];
-
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Skills & Technologies
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Expertise in modern Android development with a focus on clean architecture and best practices
-          </p>
-        </div>
+    <section id="about" className="min-h-screen bg-[#2B2B2B] text-[#A9B7C6] py-20 px-6 md:px-20">
+      {/* Line numbers sidebar */}
+      <div className="max-w-6xl mx-auto">
+        <div className="relative bg-[#313335] rounded border border-[#323232] overflow-hidden">
+          {/* File header */}
+          <div className="bg-[#3C3F41] px-4 py-2 border-b border-[#323232] font-mono text-xs text-[#787878]">
+            AboutMe.kt
+          </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <div
-              key={categoryIndex}
-              className="bg-slate-50 rounded-xl p-8 border border-slate-200 hover:border-emerald-500/50 transition-all duration-300"
-            >
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">
-                {category.title}
-              </h3>
-
-              <div className="space-y-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-semibold text-slate-700">
-                        {skill.name}
-                      </span>
-                      <span className="text-emerald-600 font-semibold">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
-                      <div
-                        className="bg-gradient-to-r from-emerald-500 to-cyan-500 h-full rounded-full transition-all duration-1000 ease-out"
-                        style={{
-                          width: `${skill.level}%`,
-                          animationDelay: `${categoryIndex * 100 + skillIndex * 50}ms`
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+          {/* Code editor content */}
+          <div className="p-8 font-mono text-sm md:text-base">
+            {/* Package and imports */}
+            <div className="mb-8">
+              <p className="text-[#CC7832]">
+                <span>package</span> <span className="text-[#A9B7C6]">com.portfolio.about</span>
+              </p>
+              <p className="text-[#808080] mt-2">// About Me - Student & Android Developer</p>
             </div>
-          ))}
-        </div>
 
-        <div className="mt-16 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">
-            Continuous Learning
-          </h3>
-          <p className="text-lg max-w-3xl mx-auto">
-            Constantly exploring new Android technologies and best practices. Active participant in the Android development community through open source contributions and knowledge sharing.
-          </p>
+            {/* Education */}
+            <div className="mb-8">
+              <p className="text-[#808080] mb-3">// Education:</p>
+              <p className="pl-0">
+                <span className="text-[#CC7832]">val</span> <span className="text-[#9876AA]">university</span> <span className="text-[#CC7832]">=</span> <span className="text-[#6A8759]">"Vellore Institute of Technology"</span>
+              </p>
+              <p className="pl-0">
+                <span className="text-[#CC7832]">val</span> <span className="text-[#9876AA]">degree</span> <span className="text-[#CC7832]">=</span> <span className="text-[#6A8759]">"B.Tech in Computer Science"</span>
+              </p>
+              <p className="pl-0">
+                <span className="text-[#CC7832]">val</span> <span className="text-[#9876AA]">expectedGraduation</span> <span className="text-[#CC7832]">=</span> <span className="text-[#6897BB]">2026</span>
+              </p>
+            </div>
+
+            {/* Skills */}
+            <div className="mb-8">
+              <p className="text-[#808080] mb-3">// Skills:</p>
+              
+              <p className="mb-2">
+                <span className="text-[#CC7832]">val</span> <span className="text-[#9876AA]">languages</span> <span className="text-[#CC7832]">=</span> <span className="text-[#A9B7C6]">listOf(</span>
+              </p>
+              <div className="pl-4 mb-2">
+                <p><span className="text-[#6A8759]">"Kotlin"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"Java"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"Python"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"JavaScript"</span></p>
+              </div>
+              <p className="mb-4"><span className="text-[#A9B7C6]">)</span></p>
+
+              <p className="mb-2">
+                <span className="text-[#CC7832]">val</span> <span className="text-[#9876AA]">frameworks</span> <span className="text-[#CC7832]">=</span> <span className="text-[#A9B7C6]">listOf(</span>
+              </p>
+              <div className="pl-4 mb-2">
+                <p><span className="text-[#6A8759]">"Android SDK"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"Jetpack Compose"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"Retrofit"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"Room Database"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"Coroutines & Flow"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"Hilt/Dagger"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"MVVM Architecture"</span></p>
+              </div>
+              <p className="mb-4"><span className="text-[#A9B7C6]">)</span></p>
+
+              <p className="mb-2">
+                <span className="text-[#CC7832]">val</span> <span className="text-[#9876AA]">tools</span> <span className="text-[#CC7832]">=</span> <span className="text-[#A9B7C6]">listOf(</span>
+              </p>
+              <div className="pl-4 mb-2">
+                <p><span className="text-[#6A8759]">"Android Studio"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"Git & GitHub"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"Firebase"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"Postman"</span><span className="text-[#CC7832]">,</span></p>
+                <p><span className="text-[#6A8759]">"Figma"</span></p>
+              </div>
+              <p><span className="text-[#A9B7C6]">)</span></p>
+            </div>
+
+            {/* Passion Statement */}
+            <div>
+              <p className="text-[#808080] mb-3">// Passion Statement:</p>
+              <p className="mb-2">
+                <span className="text-[#CC7832]">val</span> <span className="text-[#9876AA]">passion</span> <span className="text-[#CC7832]">=</span> <span className="text-[#6A8759]">"""</span>
+              </p>
+              <div className="pl-4 text-[#6A8759] leading-relaxed">
+                <p>I'm passionate about creating intuitive and performant Android</p>
+                <p>applications that solve real-world problems. My journey in mobile</p>
+                <p>development started with a curiosity about how apps work, and it</p>
+                <p>has evolved into a dedication to mastering modern Android</p>
+                <p>development practices and contributing to open-source projects.</p>
+              </div>
+              <p><span className="text-[#6A8759]">"""</span><span className="text-[#A9B7C6]">.trimIndent()</span></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
