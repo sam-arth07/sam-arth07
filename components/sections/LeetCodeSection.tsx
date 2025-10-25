@@ -16,10 +16,6 @@ export default function LeetCodeSection() {
   const [stats, setStats] = useState<LeetCodeStats | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchLeetCodeStats();
-  }, []);
-
   const fetchLeetCodeStats = async () => {
     // Using mock data as LeetCode API requires authentication
     // In production, you would use a backend service to fetch this data
@@ -37,6 +33,10 @@ export default function LeetCodeSection() {
       setLoading(false);
     }, 500);
   };
+
+  useEffect(() => {
+    fetchLeetCodeStats();
+  }, []);
 
   if (loading) {
     return (

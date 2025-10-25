@@ -22,10 +22,6 @@ export default function GitHubSection() {
   const [loading, setLoading] = useState(true);
   const [skills, setSkills] = useState<string[]>([]);
 
-  useEffect(() => {
-    fetchGitHubData();
-  }, []);
-
   const fetchGitHubData = async () => {
     try {
       // Fetch repositories
@@ -95,6 +91,10 @@ export default function GitHubSection() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchGitHubData();
+  }, []);
 
   const openRepoModal = async (repo: Repository) => {
     setSelectedRepo(repo);
