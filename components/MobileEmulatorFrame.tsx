@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode, useState, useRef } from 'react';
+import { ReactNode, useRef } from 'react';
 import { Wifi, Battery, Signal } from 'lucide-react';
 
 interface MobileEmulatorFrameProps {
@@ -10,7 +10,6 @@ interface MobileEmulatorFrameProps {
 }
 
 export default function MobileEmulatorFrame({ children, onHomeClick, onMenuClick }: MobileEmulatorFrameProps) {
-  const [showMenu, setShowMenu] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
   const scrollToTop = () => {
@@ -27,7 +26,7 @@ export default function MobileEmulatorFrame({ children, onHomeClick, onMenuClick
   };
 
   const handleMenuClick = () => {
-    setShowMenu(!showMenu);
+    scrollToTop();
     if (onMenuClick) {
       onMenuClick();
     }
@@ -96,7 +95,7 @@ export default function MobileEmulatorFrame({ children, onHomeClick, onMenuClick
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
             <span className="absolute left-full ml-2 px-2 py-1 bg-[#2B2B2B] text-[#A9B7C6] text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-              {showMenu ? 'Close Menu' : 'Open Menu'}
+              Recents Menu
             </span>
           </div>
         </div>
