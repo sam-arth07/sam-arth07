@@ -10,6 +10,8 @@
 </p>
 
 
+Visit my portfolio: https://samarthchaplot.dev
+
 :man_technologist:Welcome to my digital playground! 🎢 I'm a passionate about Tech as a whole with particular interest in Mobile Application Development<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
 
 - 👨‍💻 I'm on a mission to code solutions that make a difference.
