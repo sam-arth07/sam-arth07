@@ -1,6 +1,6 @@
-import NewPortfolio from '@/components/NewPortfolio';
+import ModernPortfolio from '@/components/ModernPortfolio';
 
 export default function Home() {
-  return <NewPortfolio />;
+  return <ModernPortfolio />;
 }
 
