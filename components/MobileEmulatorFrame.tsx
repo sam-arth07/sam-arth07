@@ -2,6 +2,7 @@
 
 import { ReactNode, useRef } from 'react';
 import { Wifi, Battery, Signal } from 'lucide-react';
+import { useTheme } from '@/contexts/ThemeContext';
 
 interface MobileEmulatorFrameProps {
   children: ReactNode;
@@ -11,6 +12,7 @@ interface MobileEmulatorFrameProps {
 
 export default function MobileEmulatorFrame({ children, onHomeClick, onMenuClick }: MobileEmulatorFrameProps) {
   const contentRef = useRef<HTMLDivElement>(null);
+  const { theme, toggleTheme } = useTheme();
 
   const scrollToTop = () => {
     if (contentRef.current) {
@@ -26,23 +28,28 @@ export default function MobileEmulatorFrame({ children, onHomeClick, onMenuClick
   };
 
   const handleMenuClick = () => {
-    scrollToTop();
+    toggleTheme();
     if (onMenuClick) {
       onMenuClick();
     }
   };
 
+  // Theme colors
+  const bgColor = theme === 'dark' ? '#2B2B2B' : '#F5F5F5';
+  const statusBarBg = theme === 'dark' ? '#2B2B2B' : '#FFFFFF';
+  const textColor = theme === 'dark' ? 'white' : 'black';
+
   return (
-    <div className="flex items-center justify-center h-full py-12 px-8">
+    <div className="flex items-center justify-center h-full w-full">
       {/* Phone Frame */}
-      <div className="relative bg-[#1E1E1E] rounded-[40px] shadow-2xl" style={{ width: '375px', height: '812px' }}>
+      <div className="relative bg-[#1E1E1E] rounded-[40px] shadow-2xl" style={{ width: '375px', height: '812px', maxHeight: '90vh' }}>
         {/* Phone Border */}
         <div className="absolute inset-0 rounded-[40px] border-[14px] border-[#0A0A0A]">
           {/* Notch */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-[#0A0A0A] rounded-b-3xl z-20"></div>
           
           {/* Status Bar */}
-          <div className="absolute top-0 left-0 right-0 h-11 bg-[#2B2B2B] flex items-center justify-between px-8 text-white text-xs z-10">
+          <div className="absolute top-0 left-0 right-0 h-11 flex items-center justify-between px-8 text-xs z-10" style={{ backgroundColor: statusBarBg, color: textColor }}>
             <span className="font-semibold">9:41</span>
             <div className="flex items-center gap-1">
               <Signal className="w-3 h-3" />
@@ -52,7 +59,7 @@ export default function MobileEmulatorFrame({ children, onHomeClick, onMenuClick
           </div>
 
           {/* Screen Content */}
-          <div ref={contentRef} className="absolute top-11 left-0 right-0 bottom-0 bg-[#2B2B2B] overflow-y-auto custom-scrollbar">
+          <div ref={contentRef} className="absolute top-11 left-0 right-0 bottom-0 overflow-y-auto custom-scrollbar" style={{ backgroundColor: bgColor }}>
             {children}
           </div>
         </div>
@@ -95,7 +102,7 @@ export default function MobileEmulatorFrame({ children, onHomeClick, onMenuClick
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
             <span className="absolute left-full ml-2 px-2 py-1 bg-[#2B2B2B] text-[#A9B7C6] text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-              Recents Menu
+              Toggle Theme ({theme === 'dark' ? 'Light' : 'Dark'})
             </span>
           </div>
         </div>

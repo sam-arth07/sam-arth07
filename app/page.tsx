@@ -3,29 +3,43 @@
 import { useState } from 'react';
 import ExplorerSidebar from '@/components/ExplorerSidebar';
 import MobileEmulatorFrame from '@/components/MobileEmulatorFrame';
-import HeroMobile from '@/components/HeroMobile';
-import SkillsMobile from '@/components/SkillsMobile';
-import ExperienceMobile from '@/components/ExperienceMobile';
-import ProjectsMobile from '@/components/ProjectsMobile';
-import ContactMobile from '@/components/ContactMobile';
+import HomeScreen from '@/components/HomeScreen';
+import AboutScreen from '@/components/AboutScreen';
+import ExperienceScreen from '@/components/ExperienceScreen';
+import ProjectsScreen from '@/components/ProjectsScreen';
+import ContactScreen from '@/components/ContactScreen';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
+  const [direction, setDirection] = useState<'left' | 'right'>('left');
+
+  const sections = ['home', 'about', 'experience', 'projects', 'contact'];
+
+  const handleSectionChange = (newSection: string) => {
+    const currentIndex = sections.indexOf(activeSection);
+    const newIndex = sections.indexOf(newSection);
+    setDirection(newIndex > currentIndex ? 'left' : 'right');
+    setActiveSection(newSection);
+  };
 
   const renderSection = () => {
+    const transitionClass = direction === 'left' 
+      ? 'animate-slideInLeft' 
+      : 'animate-slideInRight';
+
     switch (activeSection) {
       case 'home':
-        return <HeroMobile />;
+        return <HomeScreen key="home" onNavigate={handleSectionChange} />;
       case 'about':
-        return <SkillsMobile />;
+        return <AboutScreen key="about" />;
       case 'experience':
-        return <ExperienceMobile />;
+        return <ExperienceScreen key="experience" />;
       case 'projects':
-        return <ProjectsMobile />;
+        return <ProjectsScreen key="projects" />;
       case 'contact':
-        return <ContactMobile />;
+        return <ContactScreen key="contact" />;
       default:
-        return <HeroMobile />;
+        return <HomeScreen key="home" onNavigate={handleSectionChange} />;
     }
   };
 
@@ -51,14 +65,16 @@ export default function Home() {
       {/* Main Content Area */}
       <div className="flex-1 flex overflow-hidden">
         {/* Explorer Sidebar */}
-        <ExplorerSidebar activeSection={activeSection} onSectionChange={setActiveSection} />
+        <ExplorerSidebar activeSection={activeSection} onSectionChange={handleSectionChange} />
 
         {/* Emulator View */}
         <div className="flex-1 bg-[#2B2B2B] overflow-hidden">
           <MobileEmulatorFrame 
-            onHomeClick={() => setActiveSection('home')}
+            onHomeClick={() => handleSectionChange('home')}
           >
-            {renderSection()}
+            <div className="h-full">
+              {renderSection()}
+            </div>
           </MobileEmulatorFrame>
         </div>
       </div>

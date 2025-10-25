@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Roboto } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 const roboto = Roboto({
 	weight: ["300", "400", "500", "700"],
@@ -50,7 +51,9 @@ export default function RootLayout({
 		<html lang="en" className="scroll-smooth">
 			<body
 				className={`${roboto.variable} ${jetbrainsMono.variable} antialiased`}>
-				{children}
+				<ThemeProvider>
+					{children}
+				</ThemeProvider>
 			</body>
 		</html>
 	);
