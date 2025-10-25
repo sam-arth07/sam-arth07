@@ -1,0 +1,22 @@
+{
+	"name": "Android Developer Portfolio",
+	"short_name": "Portfolio",
+	"description": "Portfolio of a passionate Android developer specializing in Kotlin, Jetpack Compose, and modern Android development",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#2B2B2B",
+	"theme_color": "#3DDC84",
+	"icons": [
+		{
+			"src": "/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "/apple-touch-icon.png",
+			"sizes": "180x180",
+			"type": "image/png"
+		}
+	]
+}
