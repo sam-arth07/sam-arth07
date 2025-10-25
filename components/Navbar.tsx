@@ -40,15 +40,15 @@ export default function Navbar() {
       }}
       animate={hidden ? 'hidden' : 'visible'}
       transition={{ duration: 0.35, ease: 'easeInOut' }}
-      className="fixed top-0 left-0 right-0 z-50 px-6 py-4"
+      className="fixed top-0 left-0 right-0 z-50 px-6 xl:px-8 py-4 xl:py-5"
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-2xl px-6 py-3 shadow-2xl">
+      <div className="max-w-7xl xl:max-w-[1400px] mx-auto">
+        <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-2xl px-6 xl:px-8 py-3 xl:py-4 shadow-2xl">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <motion.a
               href="#home"
-              className="text-2xl font-bold bg-gradient-to-r from-[#3DDC84] to-[#4AE490] bg-clip-text text-transparent"
+              className="text-2xl xl:text-3xl font-bold bg-gradient-to-r from-[#3DDC84] to-[#4AE490] bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -56,7 +56,7 @@ export default function Navbar() {
             </motion.a>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-8 xl:gap-10">
               {navItems.map((item) => (
                 <motion.a
                   key={item.name}
@@ -71,7 +71,7 @@ export default function Navbar() {
             </div>
 
             {/* Social Links */}
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-4 xl:gap-5">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
@@ -83,7 +83,7 @@ export default function Navbar() {
                   whileTap={{ scale: 0.9 }}
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-5 h-5 xl:w-6 xl:h-6" />
                 </motion.a>
               ))}
             </div>

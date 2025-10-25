@@ -17,10 +17,10 @@ export default function AboutSection() {
     <section
       id="about"
       ref={ref}
-      className="relative min-h-screen flex items-center py-20 md:py-32 px-6 md:px-12 lg:px-16"
+      className="relative min-h-screen flex items-center py-20 md:py-32 xl:py-40 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-24"
     >
-      <div className="max-w-7xl mx-auto w-full">
-        <motion.div style={{ opacity }} className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+      <div className="max-w-7xl xl:max-w-[1400px] mx-auto w-full">
+        <motion.div style={{ opacity }} className="grid md:grid-cols-2 gap-12 md:gap-16 xl:gap-20 items-center">
           {/* Left column - Text content */}
           <motion.div
             style={{ y }}
@@ -32,7 +32,7 @@ export default function AboutSection() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
                 <span className="text-white">About</span>
                 <br />
                 <span className="bg-gradient-to-r from-[#3DDC84] to-[#4AE490] bg-clip-text text-transparent">
@@ -46,7 +46,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-lg text-white/70 leading-relaxed"
+              className="text-lg xl:text-xl text-white/70 leading-relaxed"
             >
               I&apos;m a passionate Android Developer with expertise in{' '}
               <span className="text-[#3DDC84] font-semibold">Kotlin</span>,{' '}
@@ -60,7 +60,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-lg text-white/70 leading-relaxed"
+              className="text-lg xl:text-xl text-white/70 leading-relaxed"
             >
               With a strong foundation in software engineering and a keen eye for detail, I build
               applications that are not only functional but also beautiful and user-friendly.

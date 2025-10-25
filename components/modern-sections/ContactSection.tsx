@@ -40,9 +40,9 @@ export default function ContactSection() {
     <section
       id="contact"
       ref={ref}
-      className="relative min-h-screen flex items-center py-20 md:py-32 px-6 md:px-12 lg:px-16"
+      className="relative min-h-screen flex items-center py-20 md:py-32 xl:py-40 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-24"
     >
-      <div className="max-w-5xl mx-auto w-full">
+      <div className="max-w-5xl xl:max-w-6xl mx-auto w-full">
         <motion.div style={{ opacity }}>
           <motion.div
             style={{ y }}
@@ -54,14 +54,14 @@ export default function ContactSection() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
                 <span className="text-white">Let&apos;s Create</span>
                 <br />
                 <span className="bg-gradient-to-r from-[#3DDC84] to-[#4AE490] bg-clip-text text-transparent">
                   Something Amazing
                 </span>
               </h2>
-              <p className="text-white/60 text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
+              <p className="text-white/60 text-base md:text-lg lg:text-xl xl:text-2xl max-w-2xl xl:max-w-3xl mx-auto">
                 Have a project in mind? Let&apos;s collaborate and build exceptional Android
                 experiences together.
               </p>
@@ -77,7 +77,7 @@ export default function ContactSection() {
             >
               <motion.a
                 href="mailto:samarthchaplot7@gmail.com"
-                className="group relative inline-flex items-center gap-4 px-12 py-6 bg-gradient-to-r from-[#3DDC84] to-[#4AE490] rounded-full font-bold text-lg text-black overflow-hidden"
+                className="group relative inline-flex items-center gap-4 px-12 py-6 xl:px-16 xl:py-7 bg-gradient-to-r from-[#3DDC84] to-[#4AE490] rounded-full font-bold text-lg xl:text-xl text-black overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onHoverStart={() => setIsHovering(true)}

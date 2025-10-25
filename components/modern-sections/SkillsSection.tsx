@@ -30,9 +30,9 @@ export default function SkillsSection() {
     <section
       id="skills"
       ref={ref}
-      className="relative min-h-screen py-20 md:py-32 px-6 md:px-12 lg:px-16"
+      className="relative min-h-screen py-20 md:py-32 xl:py-40 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-24"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl xl:max-w-[1400px] mx-auto">
         <motion.div style={{ opacity }}>
           <motion.div
             style={{ y }}
@@ -43,7 +43,7 @@ export default function SkillsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4"
             >
               <span className="text-white">Technical</span>
               <br />
@@ -56,13 +56,13 @@ export default function SkillsSection() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-white/60 text-base md:text-lg max-w-2xl mx-auto"
+              className="text-white/60 text-base md:text-lg xl:text-xl max-w-2xl xl:max-w-3xl mx-auto"
             >
               Technologies and tools I work with
             </motion.p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 xl:gap-8">
             {skills.map((skill, index) => (
               <motion.div
                 key={skill.name}

@@ -23,14 +23,14 @@ export default function HeroSection() {
     >
       <motion.div
         style={{ y, opacity, scale }}
-        className="relative z-10 text-center px-6 md:px-12 lg:px-16 max-w-7xl mx-auto"
+        className="relative z-10 text-center px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-24 max-w-7xl mx-auto"
       >
         {/* Animated name with gradient */}
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6"
+          className="text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[12rem] font-bold mb-6"
         >
           <span className="bg-gradient-to-r from-[#3DDC84] via-[#4AE490] to-[#60E6A0] bg-clip-text text-transparent">
             Samarth
@@ -44,7 +44,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-3xl text-white/60 font-light mb-8"
+          className="text-xl md:text-3xl xl:text-4xl text-white/60 font-light mb-8"
         >
           Android Developer & Creative Technologist
         </motion.p>
@@ -54,7 +54,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="max-w-3xl mx-auto text-base md:text-lg text-white/40 italic mb-16"
+          className="max-w-3xl xl:max-w-4xl mx-auto text-base md:text-lg xl:text-xl text-white/40 italic mb-16"
         >
           &ldquo;If I can&apos;t even protect my captain&apos;s dream, then whatever ambition I have is nothing but talk!&rdquo;
           <footer className="text-sm mt-3 text-[#3DDC84]/60">— Roronoa Zoro, One Piece</footer>
@@ -65,11 +65,11 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex gap-4 justify-center"
+          className="flex gap-4 xl:gap-6 justify-center flex-wrap"
         >
           <motion.a
             href="#projects"
-            className="group relative px-8 py-4 bg-gradient-to-r from-[#3DDC84] to-[#4AE490] rounded-full font-semibold text-black overflow-hidden"
+            className="group relative px-8 py-4 xl:px-10 xl:py-5 bg-gradient-to-r from-[#3DDC84] to-[#4AE490] rounded-full font-semibold text-base xl:text-lg text-black overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -84,7 +84,7 @@ export default function HeroSection() {
 
           <motion.a
             href="#contact"
-            className="px-8 py-4 border-2 border-[#3DDC84]/30 rounded-full font-semibold text-white hover:bg-[#3DDC84]/10 transition-colors backdrop-blur-sm"
+            className="px-8 py-4 xl:px-10 xl:py-5 border-2 border-[#3DDC84]/30 rounded-full font-semibold text-base xl:text-lg text-white hover:bg-[#3DDC84]/10 transition-colors backdrop-blur-sm"
             whileHover={{ scale: 1.05, borderColor: '#3DDC84' }}
             whileTap={{ scale: 0.95 }}
           >

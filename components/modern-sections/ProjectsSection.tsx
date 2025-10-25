@@ -172,9 +172,9 @@ export default function ProjectsSection() {
     <section
       id="projects"
       ref={ref}
-      className="relative min-h-screen py-20 md:py-32 px-6 md:px-12 lg:px-16"
+      className="relative min-h-screen py-20 md:py-32 xl:py-40 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-24"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl xl:max-w-[1400px] mx-auto">
         <motion.div style={{ opacity }}>
           <motion.div
             style={{ y }}
@@ -185,7 +185,7 @@ export default function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4"
             >
               <span className="text-white">Featured</span>
               <br />
@@ -198,13 +198,13 @@ export default function ProjectsSection() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-white/60 text-base md:text-lg max-w-2xl mx-auto"
+              className="text-white/60 text-base md:text-lg xl:text-xl max-w-2xl xl:max-w-3xl mx-auto"
             >
               A collection of my recent work showcasing Android development expertise
             </motion.p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
             {projects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
