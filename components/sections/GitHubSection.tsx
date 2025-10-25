@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { Github, Star, GitFork, ExternalLink, X } from 'lucide-react';
 
 interface Repository {
@@ -22,7 +22,7 @@ export default function GitHubSection() {
   const [loading, setLoading] = useState(true);
   const [skills, setSkills] = useState<string[]>([]);
 
-  const fetchGitHubData = async () => {
+  const fetchGitHubData = useCallback(async () => {
     try {
       // Fetch repositories
       const reposResponse = await fetch('https://api.github.com/users/sam-arth07/repos?sort=updated&per_page=6');
@@ -90,11 +90,11 @@ export default function GitHubSection() {
       setSkills(['Kotlin', 'Jetpack Compose', 'Android Studio', 'Firebase', 'React', 'JavaScript', 'Node.js', 'Tailwind CSS', 'Git', 'Python']);
       setLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetchGitHubData();
-  }, []);
+  }, [fetchGitHubData]);
 
   const openRepoModal = async (repo: Repository) => {
     setSelectedRepo(repo);

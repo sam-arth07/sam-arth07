@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 interface LeetCodeStats {
@@ -16,7 +16,7 @@ export default function LeetCodeSection() {
   const [stats, setStats] = useState<LeetCodeStats | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const fetchLeetCodeStats = async () => {
+  const fetchLeetCodeStats = useCallback(async () => {
     // Using mock data as LeetCode API requires authentication
     // In production, you would use a backend service to fetch this data
     const mockStats: LeetCodeStats = {
@@ -32,11 +32,11 @@ export default function LeetCodeSection() {
       setStats(mockStats);
       setLoading(false);
     }, 500);
-  };
+  }, []);
 
   useEffect(() => {
     fetchLeetCodeStats();
-  }, []);
+  }, [fetchLeetCodeStats]);
 
   if (loading) {
     return (
