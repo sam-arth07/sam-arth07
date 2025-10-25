@@ -17,10 +17,10 @@ export default function AboutSection() {
     <section
       id="about"
       ref={ref}
-      className="relative min-h-screen flex items-center py-32 px-4 md:px-8"
+      className="relative min-h-screen flex items-center py-20 md:py-32 px-6 md:px-12 lg:px-16"
     >
-      <div className="max-w-6xl mx-auto w-full">
-        <motion.div style={{ opacity }} className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto w-full">
+        <motion.div style={{ opacity }} className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left column - Text content */}
           <motion.div
             style={{ y }}
@@ -32,7 +32,7 @@ export default function AboutSection() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="text-white">About</span>
                 <br />
                 <span className="bg-gradient-to-r from-[#3DDC84] to-[#4AE490] bg-clip-text text-transparent">

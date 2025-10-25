@@ -23,7 +23,7 @@ export default function HeroSection() {
     >
       <motion.div
         style={{ y, opacity, scale }}
-        className="relative z-10 text-center px-4 md:px-8"
+        className="relative z-10 text-center px-6 md:px-12 lg:px-16 max-w-7xl mx-auto"
       >
         {/* Animated name with gradient */}
         <motion.h1

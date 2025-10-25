@@ -40,9 +40,9 @@ export default function ContactSection() {
     <section
       id="contact"
       ref={ref}
-      className="relative min-h-screen flex items-center py-32 px-4 md:px-8"
+      className="relative min-h-screen flex items-center py-20 md:py-32 px-6 md:px-12 lg:px-16"
     >
-      <div className="max-w-4xl mx-auto w-full">
+      <div className="max-w-5xl mx-auto w-full">
         <motion.div style={{ opacity }}>
           <motion.div
             style={{ y }}
@@ -54,14 +54,14 @@ export default function ContactSection() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-7xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="text-white">Let&apos;s Create</span>
                 <br />
                 <span className="bg-gradient-to-r from-[#3DDC84] to-[#4AE490] bg-clip-text text-transparent">
                   Something Amazing
                 </span>
               </h2>
-              <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto">
+              <p className="text-white/60 text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
                 Have a project in mind? Let&apos;s collaborate and build exceptional Android
                 experiences together.
               </p>

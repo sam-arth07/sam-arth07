@@ -172,20 +172,20 @@ export default function ProjectsSection() {
     <section
       id="projects"
       ref={ref}
-      className="relative min-h-screen py-32 px-4 md:px-8"
+      className="relative min-h-screen py-20 md:py-32 px-6 md:px-12 lg:px-16"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div style={{ opacity }}>
           <motion.div
             style={{ y }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-6xl font-bold mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
             >
               <span className="text-white">Featured</span>
               <br />
@@ -198,7 +198,7 @@ export default function ProjectsSection() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-white/60 text-lg max-w-2xl mx-auto"
+              className="text-white/60 text-base md:text-lg max-w-2xl mx-auto"
             >
               A collection of my recent work showcasing Android development expertise
             </motion.p>
