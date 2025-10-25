@@ -1,15 +1,40 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useState, useRef } from 'react';
 import { Wifi, Battery, Signal } from 'lucide-react';
 
 interface MobileEmulatorFrameProps {
   children: ReactNode;
+  onHomeClick?: () => void;
+  onMenuClick?: () => void;
 }
 
-export default function MobileEmulatorFrame({ children }: MobileEmulatorFrameProps) {
+export default function MobileEmulatorFrame({ children, onHomeClick, onMenuClick }: MobileEmulatorFrameProps) {
+  const [showMenu, setShowMenu] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const scrollToTop = () => {
+    if (contentRef.current) {
+      contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleHomeClick = () => {
+    scrollToTop();
+    if (onHomeClick) {
+      onHomeClick();
+    }
+  };
+
+  const handleMenuClick = () => {
+    setShowMenu(!showMenu);
+    if (onMenuClick) {
+      onMenuClick();
+    }
+  };
+
   return (
-    <div className="flex items-center justify-center h-full p-8">
+    <div className="flex items-center justify-center h-full py-12 px-8">
       {/* Phone Frame */}
       <div className="relative bg-[#1E1E1E] rounded-[40px] shadow-2xl" style={{ width: '375px', height: '812px' }}>
         {/* Phone Border */}
@@ -28,7 +53,7 @@ export default function MobileEmulatorFrame({ children }: MobileEmulatorFramePro
           </div>
 
           {/* Screen Content */}
-          <div className="absolute top-11 left-0 right-0 bottom-0 bg-[#2B2B2B] overflow-y-auto custom-scrollbar">
+          <div ref={contentRef} className="absolute top-11 left-0 right-0 bottom-0 bg-[#2B2B2B] overflow-y-auto custom-scrollbar">
             {children}
           </div>
         </div>
@@ -40,18 +65,39 @@ export default function MobileEmulatorFrame({ children }: MobileEmulatorFramePro
       {/* Emulator Controls (decorative) */}
       <div className="ml-6 space-y-3">
         <div className="flex flex-col gap-2">
-          <div className="w-12 h-12 bg-[#3C3F41] rounded-lg border border-[#323232] flex items-center justify-center cursor-pointer hover:bg-[#4A4A4A] transition-colors">
+          <div 
+            onClick={scrollToTop}
+            className="w-12 h-12 bg-[#3C3F41] rounded-lg border border-[#323232] flex items-center justify-center cursor-pointer hover:bg-[#4A4A4A] transition-colors group relative"
+            title="Scroll to Top"
+          >
             <svg className="w-6 h-6 text-[#3DDC84]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
             </svg>
+            <span className="absolute left-full ml-2 px-2 py-1 bg-[#2B2B2B] text-[#A9B7C6] text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+              Scroll to Top
+            </span>
           </div>
-          <div className="w-12 h-12 bg-[#3C3F41] rounded-lg border border-[#323232] flex items-center justify-center cursor-pointer hover:bg-[#4A4A4A] transition-colors">
+          <div 
+            onClick={handleHomeClick}
+            className="w-12 h-12 bg-[#3C3F41] rounded-lg border border-[#323232] flex items-center justify-center cursor-pointer hover:bg-[#4A4A4A] transition-colors group relative"
+            title="Home"
+          >
             <div className="w-6 h-6 rounded-full border-2 border-[#3DDC84]"></div>
+            <span className="absolute left-full ml-2 px-2 py-1 bg-[#2B2B2B] text-[#A9B7C6] text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+              Go Home
+            </span>
           </div>
-          <div className="w-12 h-12 bg-[#3C3F41] rounded-lg border border-[#323232] flex items-center justify-center cursor-pointer hover:bg-[#4A4A4A] transition-colors">
+          <div 
+            onClick={handleMenuClick}
+            className="w-12 h-12 bg-[#3C3F41] rounded-lg border border-[#323232] flex items-center justify-center cursor-pointer hover:bg-[#4A4A4A] transition-colors group relative"
+            title="Menu"
+          >
             <svg className="w-6 h-6 text-[#3DDC84]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
+            <span className="absolute left-full ml-2 px-2 py-1 bg-[#2B2B2B] text-[#A9B7C6] text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+              {showMenu ? 'Close Menu' : 'Open Menu'}
+            </span>
           </div>
         </div>
         

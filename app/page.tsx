@@ -55,7 +55,10 @@ export default function Home() {
 
         {/* Emulator View */}
         <div className="flex-1 bg-[#2B2B2B] overflow-hidden">
-          <MobileEmulatorFrame>
+          <MobileEmulatorFrame 
+            onHomeClick={() => setActiveSection('home')}
+            onMenuClick={() => {}}
+          >
             {renderSection()}
           </MobileEmulatorFrame>
         </div>
