@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronRight, ChevronDown, Folder, FileText, Home, User, Briefcase, Code, Phone } from 'lucide-react';
+import { ChevronRight, ChevronDown, Folder, FileText, Home, User, Briefcase, Code, Phone, Menu, X } from 'lucide-react';
 
 interface ExplorerItem {
   id: string;
@@ -61,9 +61,11 @@ const explorerStructure: ExplorerItem[] = [
 interface ExplorerSidebarProps {
   activeSection: string;
   onSectionChange: (section: string) => void;
+  isCollapsed: boolean;
+  onToggle: () => void;
 }
 
-export default function ExplorerSidebar({ activeSection, onSectionChange }: ExplorerSidebarProps) {
+export default function ExplorerSidebar({ activeSection, onSectionChange, isCollapsed, onToggle }: ExplorerSidebarProps) {
   const [expandedFolders, setExpandedFolders] = useState<Set<string>>(new Set(['project', 'app']));
 
   const toggleFolder = (folderId: string) => {
@@ -125,21 +127,45 @@ export default function ExplorerSidebar({ activeSection, onSectionChange }: Expl
   };
 
   return (
-    <div className="w-64 bg-[#3C3F41] border-r border-[#323232] h-full flex flex-col">
-      {/* Sidebar Header */}
-      <div className="bg-[#2B2B2B] border-b border-[#323232] px-3 py-2">
-        <p className="text-[#787878] text-xs font-mono uppercase">Project</p>
-      </div>
+    <>
+      {/* Mobile overlay */}
+      {!isCollapsed && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={onToggle}
+        />
+      )}
+      
+      {/* Sidebar */}
+      <div className={`
+        ${isCollapsed ? '-translate-x-full lg:translate-x-0' : 'translate-x-0'}
+        fixed lg:relative
+        w-64 bg-[#3C3F41] border-r border-[#323232] h-full flex flex-col
+        transition-transform duration-300 ease-in-out
+        z-50 lg:z-auto
+      `}>
+        {/* Sidebar Header */}
+        <div className="bg-[#2B2B2B] border-b border-[#323232] px-3 py-2 flex items-center justify-between">
+          <p className="text-[#787878] text-xs font-mono uppercase">Project</p>
+          <button
+            onClick={onToggle}
+            className="lg:hidden p-1 hover:bg-[#4A4A4A] rounded transition-colors"
+            aria-label="Close sidebar"
+          >
+            <X className="w-4 h-4 text-[#787878]" />
+          </button>
+        </div>
 
-      {/* Explorer Tree */}
-      <div className="flex-1 overflow-y-auto">
-        {explorerStructure.map((item) => renderItem(item, 0))}
-      </div>
+        {/* Explorer Tree */}
+        <div className="flex-1 overflow-y-auto">
+          {explorerStructure.map((item) => renderItem(item, 0))}
+        </div>
 
-      {/* Bottom Info */}
-      <div className="bg-[#2B2B2B] border-t border-[#323232] px-3 py-2">
-        <p className="text-[#787878] text-xs font-mono">Android Developer Portfolio</p>
+        {/* Bottom Info */}
+        <div className="bg-[#2B2B2B] border-t border-[#323232] px-3 py-2">
+          <p className="text-[#787878] text-xs font-mono">Android Developer Portfolio</p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

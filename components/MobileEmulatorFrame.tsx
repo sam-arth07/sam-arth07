@@ -40,9 +40,12 @@ export default function MobileEmulatorFrame({ children, onHomeClick, onMenuClick
   const textColor = theme === 'dark' ? 'white' : 'black';
 
   return (
-    <div className="flex items-center justify-center h-full w-full">
+    <div className="flex items-center justify-center h-full w-full p-2 sm:p-4 lg:p-8">
       {/* Phone Frame */}
-      <div className="relative bg-[#1E1E1E] rounded-[40px] shadow-2xl" style={{ width: '375px', height: '812px', maxHeight: '90vh' }}>
+      <div 
+        className="relative bg-[#1E1E1E] rounded-[40px] shadow-2xl w-full max-w-[375px]" 
+        style={{ height: 'min(812px, 90vh)' }}
+      >
         {/* Phone Border */}
         <div className="absolute inset-0 rounded-[40px] border-[14px] border-[#0A0A0A]">
           {/* Notch */}
@@ -69,7 +72,7 @@ export default function MobileEmulatorFrame({ children, onHomeClick, onMenuClick
       </div>
 
       {/* Emulator Controls (decorative) */}
-      <div className="ml-6 space-y-3">
+      <div className="hidden xl:flex ml-6 space-y-3">
         <div className="flex flex-col gap-2">
           <div 
             onClick={scrollToTop}
