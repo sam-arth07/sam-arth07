@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3DDC84;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2AB86A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with rounded corners for iOS -->
+  <rect width="180" height="180" rx="40" fill="#2B2B2B"/>
+  
+  <!-- Stylized "A" for Android -->
+  <path d="M 54 126 L 90 54 L 126 126 Z" fill="none" stroke="url(#grad)" stroke-width="14" stroke-linejoin="round"/>
+  <line x1="68.5" y1="104.5" x2="111.5" y2="104.5" stroke="url(#grad)" stroke-width="14" stroke-linecap="round"/>
+  
+  <!-- Android antennas on top of A -->
+  <line x1="75.5" y1="61" x2="68" y2="47" stroke="url(#grad)" stroke-width="7" stroke-linecap="round"/>
+  <line x1="104.5" y1="61" x2="112" y2="47" stroke="url(#grad)" stroke-width="7" stroke-linecap="round"/>
+  
+  <!-- Code brackets accent -->
+  <text x="22" y="63" font-family="monospace" font-size="36" fill="#3DDC84" font-weight="bold" opacity="0.5">&lt;</text>
+  <text x="144" y="144" font-family="monospace" font-size="36" fill="#3DDC84" font-weight="bold" opacity="0.5">/&gt;</text>
+</svg>
